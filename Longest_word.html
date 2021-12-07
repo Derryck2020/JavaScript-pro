@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*function findLongestWordLength(str){
+            let longestWord = "";
+            let words = str.split(" ");
+
+            for (let i = 0; i < words.length; i++){
+                let individualWord = words[i];
+                if (individualWord.length > longestWord.length){
+                    longestWord = individualWord;
+    
+                }
+            }
+            console.log(longestWord);
+            return longestWord.length;
+        }
+        console.log(findLongestWordLength("Why is the compound so dirty?"))*/
+                        
+                           //OR                 
+
+        function findLongestWordLength(str){
+            return Math.max(...str.split(" ").map(word => word.length));
+            // Math.max is used to return the highest of all the element
+            // str.split(" ") splits the string into an array, taking spaces as separators...
+            // ...It returns this array: [“The”,"quick,“brown”,“fox”,“jumped”,“over”,“the”,“lazy”,“dog”]. 
+            // map()is used to make another array for the lengths of each element of the str.split(" ").
+            // str.split(" ").map(word => word.length) returns [3, 5, 5, 3, 6, 4, 3, 4, 3]
+            // Finally, we pass the array as argument for the Math.max function with the spread operator ...
+        }
+
+        console.log(findLongestWordLength("Why is the compound so dirty?"))
+
+    </script>
+
+</body>
+</html>
